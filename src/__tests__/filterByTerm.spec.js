@@ -30,11 +30,13 @@ describe('Filter function', () => {
   })
 
   it('should throw an error with empty array', () => {
-    expect(() => filterByTerm([], "test", 'url')).toThrowError("inputArray cannot be empty");
+    expect(() => filterByTerm([], "test", 'url'))
+      .toThrowError("inputArray cannot be empty");
   })
 
   it('should throw an error with empty searchTerm', () => {
-    expect(() => filterByTerm(["1", "2"], "", 'url')).toThrowError("searchTerm cannot be empty");
+    expect(() => filterByTerm(["1", "2"], "", 'url'))
+      .toThrowError("searchTerm cannot be empty");
   })
 
 })
