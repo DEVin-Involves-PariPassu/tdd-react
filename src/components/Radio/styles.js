@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { css } from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,10 @@ export const Input = styled.input`
   outline: none;
   cursor: pointer;
 
+  &:focus {
+    box-shadow: 0 0 0.5rem #de0202;
+  }
+
   &:before {
     content: '';
     width: 0.8rem;
@@ -38,8 +43,9 @@ export const Input = styled.input`
 `
 
 export const Label = styled.label`
- padding-left: 0.8rem;
- color: black;
- line-height: 1;
-
+ ${({labelColor}) => css`
+    color: ${labelColor};
+    padding-left: 0.8rem;
+    line-height: 1;
+ `} 
 `

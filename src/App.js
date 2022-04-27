@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Radio label="Aprenda TDD" labelFor="aprenda" value="aprenda" labelColor="white"/>
       </header>
       <Radio label="Laranja" labelFor="laranja" value="laranja" name="frutas"/>
       <Radio label="Maça" labelFor="maça" value="maca" name="frutas"/>

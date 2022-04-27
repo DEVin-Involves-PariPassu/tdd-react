@@ -1,12 +1,17 @@
 import * as S from './styles'
 
-
 const Radio = ({
   label,
   labelFor,
+  labelColor = "black",
   value,
-  name
+  name,
+  onCheck
 }) => {
+
+  const onChange = () => {
+    !!onCheck && onCheck(value)
+  }
 
   return (
     <S.Wrapper>
@@ -15,10 +20,13 @@ const Radio = ({
         type="radio"
         value={value}
         name={name}
+        onChange={onChange}
       />
-      <S.Label htmlFor={labelFor} >
-        {label}
-      </S.Label>
+      {!!label && 
+        <S.Label htmlFor={labelFor} labelColor={labelColor} >
+          {label}
+        </S.Label>
+      }
     </S.Wrapper>
   )
 }

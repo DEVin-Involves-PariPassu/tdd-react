@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Radio /> should render the radio 1`] = `
+exports[`<Radio /> should render the radio with label (black) 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -39,6 +39,10 @@ exports[`<Radio /> should render the radio 1`] = `
   cursor: pointer;
 }
 
+.c1:focus {
+  box-shadow: 0 0 0.5rem #de0202;
+}
+
 .c1:before {
   content: '';
   width: 0.8rem;
@@ -56,8 +60,8 @@ exports[`<Radio /> should render the radio 1`] = `
 }
 
 .c2 {
-  padding-left: 0.8rem;
   color: black;
+  padding-left: 0.8rem;
   line-height: 1;
 }
 
